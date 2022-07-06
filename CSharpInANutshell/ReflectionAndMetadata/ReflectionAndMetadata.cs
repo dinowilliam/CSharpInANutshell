@@ -10,5 +10,25 @@ namespace CSharpInANutshell.ReflectionAndMetadata {
         public object GetDateTimeTypeByReflectionWithTypeof() {
             return typeof(DateTime);
         }
+
+        public object GetDateTimeTypeByReflectionWithTypeofFromAnArray() {
+            return typeof(DateTime[]);
+        }
+
+        public object GetDateTimeTypeByReflectionWithTypeofFromAMatrix() {
+            return typeof(DateTime[,]);
+        }
+
+        public object GetDictionaryTypeByReflectionWithTypeofFromAClosedGenericType() {
+            return typeof(Dictionary<int, int>);
+        }
+
+        public object GetDictionaryTypeByReflectionWithTypeofFromAUnboundGenericType() {
+            return typeof(Dictionary<,>);
+        }
+
+        public object GetAssemlbyTypeOfTheExecutingAssembly() {
+            return Assembly.GetExecutingAssembly().GetType();
+        }
     }
 }
