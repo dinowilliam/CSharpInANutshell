@@ -21,7 +21,7 @@ namespace CSharpInANutshell.ReflectionAndMetadata {
 
         public object GetDictionaryTypeByReflectionWithTypeofFromAClosedGenericType() {
             return typeof(Dictionary<int, int>);
-        }
+        } 
 
         public object GetDictionaryTypeByReflectionWithTypeofFromAUnboundGenericType() {
             return typeof(Dictionary<,>);

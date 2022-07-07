@@ -4,6 +4,7 @@ namespace CSharpInANutshellTests {
     
     using CSharpInANutshell.ReflectionAndMetadata;
     using FluentAssertions;
+    using System.Reflection;
 
     public class ReflectionAndMetadataTest {
         
@@ -18,7 +19,6 @@ namespace CSharpInANutshellTests {
 
             //Assert
             type.Should().BeSameAs(DateTime.Now.GetType());
-
         }
 
         [Fact]
@@ -32,7 +32,6 @@ namespace CSharpInANutshellTests {
 
             //Assert
             type.Should().BeSameAs(typeof(DateTime));
-
         }
 
         [Fact]
@@ -46,7 +45,6 @@ namespace CSharpInANutshellTests {
 
             //Assert
             type.Should().BeSameAs(typeof(DateTime[]));
-
         }
 
         [Fact]
@@ -60,7 +58,6 @@ namespace CSharpInANutshellTests {
 
             //Assert
             type.Should().BeSameAs(typeof(DateTime[,]));
-
         }
 
         [Fact]
@@ -87,7 +84,6 @@ namespace CSharpInANutshellTests {
 
             //Assert
             type.Should().BeSameAs(typeof(Dictionary<,>));
-
         }
 
         [Fact]
@@ -100,8 +96,7 @@ namespace CSharpInANutshellTests {
             var type = reflectionAndMetadata.GetAssemlbyTypeOfTheExecutingAssembly();
 
             //Assert
-            type.Should().BeSameAs(typeof(Dictionary<,>));
-
+            type.Should().BeSameAs(Assembly.GetExecutingAssembly().GetType());
         }
     }
 }
