@@ -30,5 +30,9 @@ namespace CSharpInANutshell.ReflectionAndMetadata {
         public object GetAssemlbyTypeOfTheExecutingAssembly() {
             return Assembly.GetExecutingAssembly().GetType();
         }
+
+        public object GetAssemlbyTypeOfTheInformingAssembly() {
+            return Type.GetType("System.Int32, System.Private.CoreLib");
+        }
     }
 }

@@ -98,5 +98,18 @@ namespace CSharpInANutshellTests {
             //Assert
             type.Should().BeSameAs(Assembly.GetExecutingAssembly().GetType());
         }
+
+        [Fact]
+        public void ReflectionAndMetadata_GetAssemblyType_WhenIsInformingTheAssembly() {
+
+            //Arrange
+            var reflectionAndMetadata = new ReflectionAndMetadata();
+
+            //Act
+            var type = reflectionAndMetadata.GetAssemlbyTypeOfTheInformingAssembly();
+
+            //Assert
+            type.Should().BeSameAs(Type.GetType("System.Int32, System.Private.CoreLib"));
+        } 
     }
 }
